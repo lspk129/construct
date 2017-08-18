@@ -1,9 +1,13 @@
 import React from 'react';
 import LandingPage from '../components/LandingPage';
+import Services from '../components/Services';
 
 
 const IndexPage = () => (
-  <LandingPage />
+  <div>
+    <LandingPage />
+    <Services />
+  </div>
 );
 
 export default IndexPage;
