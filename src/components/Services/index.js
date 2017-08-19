@@ -37,7 +37,7 @@ const ColorBar = styled.div`
 const Text = styled.p`
   margin: 30px 0 30px;
   color: #5b6166;
-  line-height: 20px;
+  line-height: 26px;
 `;
 
 const Services = () => (
@@ -47,9 +47,21 @@ const Services = () => (
     <ColorBar />
     <Text>Patikėkite pastato projektavimą savo srities profesionalams</Text>
     <Section card>
-      <ServiceCard url={imageConsult} />
-      <ServiceCard url={imageMaitenance} />
-      <ServiceCard url={imageShipyard} />
+      <ServiceCard
+        url={imageShipyard}
+        serviceTitle={'Projektai'}
+        serviceText={'Siūlome pastato konstrukcijų dalies priešprojektinius sprendinius, techninį projektus.'}
+      />
+      <ServiceCard
+        url={imageConsult}
+        serviceTitle={'Konsultacijos'}
+        serviceText={'Konsultuojame konstrukciju stiprumo, stabilumo, standumo temomis.'}
+      />
+      <ServiceCard
+        url={imageMaitenance}
+        serviceTitle={'Priežiūra'}
+        serviceText={'Vykdome projektų autorinę priežiūrą statybos metu.'}
+      />
     </Section>
   </Section>
 );

@@ -17,6 +17,7 @@ const Image = styled.img`
 `;
 
 const Overlay = styled.div`
+  display: grid;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -28,6 +29,22 @@ const Overlay = styled.div`
   transition: .5s ease;
 `;
 
+const Text = styled.p`
+  color: #fff;
+  padding-top: 25px;
+  ${({ title }) => title && `
+    justify-self: center;
+    font-weight: bold;
+    font-size: 20px;
+  `}
+  ${({ text }) => text && `
+    justify-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px;
+  `}
+`
 
 class ServiceCard extends Component {
   state = { showOverlay: false };
@@ -39,7 +56,10 @@ class ServiceCard extends Component {
     return (
       <Section onMouseEnter={this.handleMouseEnter} onMouseLeave={this.handleMouseLeave}>
         <Image src={this.props.url} />
-        <Overlay show={this.state.showOverlay} />
+        <Overlay show={this.state.showOverlay}>
+          <Text title>{this.props.serviceTitle}</Text>
+          <Text text>{this.props.serviceText}</Text>
+        </Overlay>
       </Section>
     );
   }
@@ -49,4 +69,6 @@ export default ServiceCard;
 
 ServiceCard.propTypes = {
   url: PropTypes.string.isRequired,
+  serviceTitle: PropTypes.string.isRequired,
+  serviceText: PropTypes.string.isRequired,
 };
