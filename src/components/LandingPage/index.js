@@ -52,9 +52,9 @@ const Section = styled.div`
 const LandingPage = () => (
   <BackgroundImage>
     <Title>
-      Pastatu projektavimas.<br />
+      Pastatų projektavimas.<br />
       Konsultacijos.<br />
-      Individualus sprendimai.
+      Individualūs sprendimai.
     </Title>
     <Section>
       <Button info>Daugiau info</Button>
