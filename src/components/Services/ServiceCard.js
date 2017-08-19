@@ -36,13 +36,14 @@ const Text = styled.p`
     justify-self: center;
     font-weight: bold;
     font-size: 20px;
+    text-transform: uppercase;
   `}
   ${({ text }) => text && `
     justify-self: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
-    padding: 10px;
+    padding: 20px;
   `}
 `
 

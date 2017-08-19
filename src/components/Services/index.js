@@ -8,7 +8,7 @@ import imageShipyard from '../../images/shipyard-2458150_1280.jpg';
 const Section = styled.div`
   ${({ card }) => card && `
     padding: 0;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
     display: grid;
     justify-content: center;
     grid-gap: 30px;
