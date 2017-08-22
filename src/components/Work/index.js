@@ -48,10 +48,10 @@ const ImageSection = styled.div`
   grid-auto-columns: 1fr;
   grid-auto-rows: 200px;
   @media (min-width: 600px) {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
   @media (min-width: 800px) {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 250px;
     padding: 0 100px;
   }
