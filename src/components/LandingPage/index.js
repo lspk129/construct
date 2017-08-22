@@ -2,26 +2,23 @@ import React from 'react';
 import styled from 'styled-components';
 import buildingsImage from '../../images/fun-fact-bg.jpg';
 
-
 const BackgroundImage = styled.div`
-background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${buildingsImage});  
-background-size: cover;
-background-repeat: no-repeat;
-display: grid;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${buildingsImage});  
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: grid;
 `;
 
 const Title = styled.h1`
-padding-top: 200px;
-font-weight: bold;
-color: #fff;
-display: grid;
-justify-items: center;
-align-items: center;
+  padding: 200px 10px 0;
+  color: #fff;
+  display: grid;
+  justify-items: center;
 `;
 
 const Button = styled.button`
   font-size: 14px;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 10px;
   text-transform: uppercase;
   outline: none;
