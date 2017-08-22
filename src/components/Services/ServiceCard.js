@@ -37,14 +37,21 @@ const Text = styled.p`
     font-weight: bold;
     font-size: 20px;
     text-transform: uppercase;
-  `}
+  `};
   ${({ text }) => text && `
     justify-self: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 20px;
     padding: 20px;
-  `}
+  `};
+`;
+
+const MoreInfoLink = styled.span`
+  cursor: pointer;
+  ${({ color }) => color && `
+    color: #ffc527;
+  `};
 `
 
 class ServiceCard extends Component {
@@ -59,7 +66,13 @@ class ServiceCard extends Component {
         <Image src={this.props.url} />
         <Overlay show={this.state.showOverlay}>
           <Text title>{this.props.serviceTitle}</Text>
-          <Text text>{this.props.serviceText}</Text>
+          <Text text>
+            {this.props.serviceText}
+            <br />
+            <br />
+            <MoreInfoLink>Daugiau info <MoreInfoLink color>>>></MoreInfoLink></MoreInfoLink>
+          </Text>
+          
         </Overlay>
       </Section>
     );

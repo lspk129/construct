@@ -12,8 +12,17 @@ const Section = styled.div`
     display: grid;
     justify-content: center;
     grid-gap: 30px;
+    margin-bottom: 50px;
+  `};
+  ${({ text }) => text && `
+    padding: 20px;
+    @media (min-width: 600px) {
+      padding: 20px 40px;
+    }
+    @media (min-width: 800px) {
+      padding: 20px 100px;
+    }
   `}
-  ${({ padding }) => padding && 'padding: 100px;'}
 `;
 
 const Subtitle = styled.span`
@@ -41,16 +50,18 @@ const Text = styled.p`
 `;
 
 const Services = () => (
-  <Section padding>
-    <Subtitle>Paslaugos</Subtitle>
-    <Title>Mes dirbame jums</Title>
-    <ColorBar />
-    <Text>Patikėkite pastato projektavimą savo srities profesionalams</Text>
+  <Section>
+    <Section text>
+      <Subtitle>Paslaugos</Subtitle>
+      <Title>Mes dirbame jums</Title>
+      <ColorBar />
+      <Text>Teikiame šias paslaugas:</Text>
+    </Section>
     <Section card>
       <ServiceCard
         url={imageShipyard}
-        serviceTitle={'Projektai'}
-        serviceText={'Siūlome pastato konstrukcijų dalies priešprojektinius sprendinius, techninį projektus.'}
+        serviceTitle={'Projektavimas'}
+        serviceText={'Siūlome pastato konstrukcijų dalies priešprojektinius sprendinius, techninius projektus.'}
       />
       <ServiceCard
         url={imageConsult}
