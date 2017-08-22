@@ -36,6 +36,7 @@ const Fade = styled(CSSTransition).attrs({
 const Section = styled.div`
   ${({ banner }) => banner && `
     height: 200px;
+    padding: 0 10px;
     display: flex;
     justify-content: center;
     align-item: center;
@@ -43,19 +44,23 @@ const Section = styled.div`
   `}
   ${({ imageBanner }) => imageBanner && `
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    align-items: center
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media (min-width: 600px) {
+      grid-template-columns: 1fr 2fr;
+    }
   `}
 `;
 
-const Text = styled.p`
-  font-size: 30px;
+const Text = styled.h2`
+  margin: 0;
   color: #fff;
   align-self: center;
 `
 const Image = styled.img`
   width: 150px;
   margin: 0;
+  justify-self: end;
 `;
 
 class Banner extends Component {
@@ -71,7 +76,7 @@ class Banner extends Component {
         this.setState({ comp: 1, show: true });
         setTimeout(() => this.setState({ show: false}), showComponentTime)
       }
-    }, changeTime)
+    }, changeTime);
   }
 
   renderBannerOne = (props) => (

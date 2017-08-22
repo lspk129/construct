@@ -61,7 +61,7 @@ const Work = () => (
   <Section>
     <Section text>
       <Subtitle>Projektai</Subtitle>
-      <Title>Atlikti projektai</Title>
+      <Title>Mūsų darbai</Title>
       <ColorBar />
       <Text>&emsp;Žemiau pateikiama tik maža dalis projektų, kuriuos mes atlikome arba prisidėjome prie jų įgyvendinimo.</Text>
     </Section>
